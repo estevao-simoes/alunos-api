@@ -21,8 +21,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(StudentController::class)->group(function () {
     Route::get('students', 'index')->name('student.list');
-    Route::get('student/{id}', 'index')->name('student.show');
+    Route::get('student/{student}', 'show')->name('student.show');
     Route::post('student', 'store')->name('student.store');
-    Route::delete('student/{id}', 'destroy')->name('student.delete');
-    Route::patch('student/{id}', 'update')->name('student.update');
+    Route::delete('student/{student}', 'destroy')->name('student.delete');
+    Route::patch('student/{student}', 'update')->name('student.update');
 });
