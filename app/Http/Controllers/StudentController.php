@@ -67,12 +67,12 @@ class StudentController extends Controller
             'email' => 'email'
         ]);
 
-        $updatedStudent = $student->update([
+        $student->update([
             'name' => $request->name,
             'email' => $request->email
         ]);
 
-        return response()->json($updatedStudent, 204);
+        return response()->json($student->fresh());
     }
 
     /**
