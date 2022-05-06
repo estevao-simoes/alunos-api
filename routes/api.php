@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StudentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::controller(StudentController::class)->group(function () {
+    Route::get('students', 'index')->name('student.list');
+    Route::get('student/{id}', 'index')->name('student.show');
+    Route::post('student', 'store')->name('student.store');
+    Route::delete('student/{id}', 'destroy')->name('student.delete');
+    Route::patch('student/{id}', 'update')->name('student.update');
 });
