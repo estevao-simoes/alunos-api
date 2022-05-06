@@ -1,4 +1,4 @@
-## Comentários | Projeto para o Grupo A+ Educação
+## Comentários | Projeto para o Grupo +A Educação
 
 Primeiramente gostaria muito de agradecer pela oportunidade. Todos os papos com vocês do grupo foram muito agradáveis e eu adorei conhecer um pocuo da realidade de vocês.
 
